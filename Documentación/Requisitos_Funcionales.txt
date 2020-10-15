@@ -1,0 +1,35 @@
+-Una cuenta de ahorros con un saldo mayor o igual a 2 millones,
+inmediatamente tendrán un incremento del 5%.
+(If Saldo_inicial>=2,000,000
+	saldo_inicial+=saldo_inicial*0.05)
+
+-Crear la clase CuentaAhorros, 
+	*Numero_de_cuenta
+	*Nombre_titular
+	*identificación_Titular
+	*Saldo(Inicial,adicional,retirado,tranferido)
+	
+
+	-crear Metododos:
+		-Constructor.
+		-Consignar.
+		-Retirar.
+		-Traferir.
+		
+	● Implemente los métodos de acceso de cada uno de los atributos de la clase CuentaAhorros
+
+-Crear clase principal & Diccionario CuentasdeAhorros, que contienen los objetos  (Interfaz de Creacion de cuentas)
+
+-Interfaz Principal(Crear Una Cuenta nueva,Iniciar sesión).
+-Interfaz Consignación.(numero cuenta, busqueda(diccionario) )¿se debe dar una verificacion de la transacción?
+-Interfaz Retiro.(numero cuenta )
+-Interfez Tranferencia(cuenta origen, destino,monto)
+-Interfaz movimientos"estadisticos"(text view"valor total de consignaciones"; text view" valor total  retiros
+realizados";)
+
+TENER EN CUENTA:
+-total de consignaciones=sumatoriaSaldo_inicial+Sumatoria_consignaciones
+-valor total  retiros
+realizados
+
+
