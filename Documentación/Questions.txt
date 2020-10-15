@@ -1,0 +1,29 @@
+va ser generico las consultas o por user
+
+Una vez ingresada la información de las cuentas, permita al usuario la consignación, retiro
+o transferencia de dinero de la cuenta, para ello el usuario selecciona la operación que
+desea ejecutar y luego para consignación y retiro, se pide el número de la cuenta a la que
+desea hacerle la transacción y se debe buscar, en las cuentas ya creadas, la cuenta
+respectiva y aplicarle la operación;
+
+-¿se debe dar una verificacion de la transacción?  es decir la cuenta existe vaya consigne y hablamos....
+¿retiro necesita monto para verificar?, Saldo insufiente?... vaya retire o como es ? 
+
+para transferencia de dinero de una cuenta a otra, se
+debe solicitar el número de la cuenta de origen y la de destino y el monto que se va a
+transferir.
+¿diferencia entre tranferir y consignar?
+
+● Se deben mostrar las siguientes estadísticas: 
+¿es por usuario o por total clientes?
+
+valor total de consignaciones,y retiros
+realizados, por separado;
+¿pregunta inicial?
+
+total de operaciones realizadas en la entidad bancaria y mostrar
+el nombre del cliente que realiza la mayor consignación.
+
+¿ Los campos numéricos de los formularios deben tener validaciones?  #numeros cuentas,documentos cual es limite 11 , 10 respectivamente
+
+Se deben crear por lo menos 3 pruebas unitarias.
