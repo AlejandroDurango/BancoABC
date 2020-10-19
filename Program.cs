@@ -14,6 +14,7 @@ namespace BancoABC
             Form IniciarApp = new Menú_principal();
 
             Application.Run(IniciarApp);
+            //"esto es un comentario."
         }
     }
 }
