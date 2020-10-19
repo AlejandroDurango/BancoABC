@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BancoABC
 {
@@ -10,7 +11,9 @@ namespace BancoABC
     {
         static void Main(string[] args)
         {
-            form
+            Form IniciarApp = new Menú_principal();
+
+            Application.Run(IniciarApp);
         }
     }
 }
