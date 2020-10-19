@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BancoABC
 {
-    class Principal
+    public partial class Form2 : Form
     {
-        static void Main(string[] args)
+        public Form2()
         {
-            Form IniciarApp = new Menú_principal();
-
-            Application.Run(IniciarApp);
+            InitializeComponent();
         }
     }
 }
