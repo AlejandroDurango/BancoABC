@@ -4,9 +4,9 @@ inmediatamente tendrán un incremento del 5%.
 	saldo_inicial+=saldo_inicial*0.05)
 
 -Crear la clase CuentaAhorros, 
-	*Numero_de_cuenta
+	*Numero_de_cuenta(10 digitos rando si numero ramdom = primaryy kay numero cuentas, entonces vaya reload)
 	*Nombre_titular
-	*identificación_Titular
+	*identificación_Titular(maximo 15caracteres )
 	*Saldo(Inicial,adicional,retirado,tranferido)
 	
 
@@ -20,16 +20,17 @@ inmediatamente tendrán un incremento del 5%.
 
 -Crear clase principal & Diccionario CuentasdeAhorros, que contienen los objetos  (Interfaz de Creacion de cuentas)
 
--Interfaz Principal(Crear Una Cuenta nueva,Iniciar sesión).
--Interfaz Consignación.(numero cuenta, busqueda(diccionario) )¿se debe dar una verificacion de la transacción?
--Interfaz Retiro.(numero cuenta )
+-Interfaz Principal(Crear Una Cuenta nueva,Iniciar sesión, iNTERFAZ MOVIEMIENTOS ESTADISTICOS).
+-Interfaz Consignación.(numero cuenta, busqueda(diccionario) ) debe dar una verificacion de la transacción.
+-Interfaz Retiro.(numero cuenta, se debe verificar monto a consignar sea igual o menor  para dar el aval. )saldo=800 400  
 -Interfez Tranferencia(cuenta origen, destino,monto)
 -Interfaz movimientos"estadisticos"(text view"valor total de consignaciones"; text view" valor total  retiros
-realizados";)
+realizados";)   
 
 TENER EN CUENTA:
 -total de consignaciones=sumatoriaSaldo_inicial+Sumatoria_consignaciones
--valor total  retiros
+-valor total  retiros(sumatoria  de todos las consultas de retiro, clase banco.
+)
 realizados
 
 

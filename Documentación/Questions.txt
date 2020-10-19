@@ -12,10 +12,11 @@ respectiva y aplicarle la operación;
 para transferencia de dinero de una cuenta a otra, se
 debe solicitar el número de la cuenta de origen y la de destino y el monto que se va a
 transferir.
-¿diferencia entre tranferir y consignar?
+¿diferencia entre tranferir
 
 ● Se deben mostrar las siguientes estadísticas: 
-¿es por usuario o por total clientes?
+¿es por usuario o por total clientes?  
+RESPUESTA: ES EL TOTAL DE CLIENTES DEL BANCO
 
 valor total de consignaciones,y retiros
 realizados, por separado;
@@ -24,6 +25,6 @@ realizados, por separado;
 total de operaciones realizadas en la entidad bancaria y mostrar
 el nombre del cliente que realiza la mayor consignación.
 
-¿ Los campos numéricos de los formularios deben tener validaciones?  #numeros cuentas,documentos cual es limite 11 , 10 respectivamente
+¿ Los campos numéricos de los formularios deben tener validaciones?  #numeros cuentas,documentos cual es limite 11 , *15 caracteres*
 
 Se deben crear por lo menos 3 pruebas unitarias.
