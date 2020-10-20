@@ -1,6 +1,6 @@
 ﻿namespace BancoABC
 {
-    partial class Menú_principal
+    partial class Menu_principal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menú_principal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_principal));
             this.Iniciar_sesion = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,7 +47,6 @@
             this.Iniciar_sesion.Text = "Iniciar Sesión";
             this.Iniciar_sesion.UseCompatibleTextRendering = true;
             this.Iniciar_sesion.UseVisualStyleBackColor = true;
-            this.Iniciar_sesion.UseWaitCursor = true;
             this.Iniciar_sesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
@@ -82,7 +81,8 @@
             this.Logo.Location = new System.Drawing.Point(59, 34);
             this.Logo.Margin = new System.Windows.Forms.Padding(0);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(198, 198);
+            this.Logo.Size = new System.Drawing.Size(200, 200);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 3;
             this.Logo.TabStop = false;
             this.Logo.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 450);
+            this.ClientSize = new System.Drawing.Size(338, 450);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.button2);

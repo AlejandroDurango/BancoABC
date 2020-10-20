@@ -11,10 +11,10 @@ namespace BancoABC
     {
         static void Main(string[] args)
         {
-            Form IniciarApp = new Menú_principal();
+            Form IniciarApp = new Menu_principal();
 
             Application.Run(IniciarApp);
-            //"esto es un comentario."
+            
         }
     }
 }

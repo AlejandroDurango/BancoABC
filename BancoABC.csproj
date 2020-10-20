@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BancoABC.Principal</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,22 +49,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consignacion.Designer.cs">
+      <DependentUpon>Consignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tranferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tranferencias.Designer.cs">
+      <DependentUpon>Tranferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Retiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retiro.Designer.cs">
+      <DependentUpon>Retiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones.Designer.cs">
+      <DependentUpon>Transacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Retiro_consignaciones.cs">
+    <Compile Include="Menu_principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Retiro_consignaciones.Designer.cs">
-      <DependentUpon>Retiro_consignaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menú_principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menú_principal.Designer.cs">
-      <DependentUpon>Menú_principal.cs</DependentUpon>
+    <Compile Include="Menu_principal.Designer.cs">
+      <DependentUpon>Menu_principal.cs</DependentUpon>
     </Compile>
     <Compile Include="IngresoCuentas.cs">
       <SubType>Form</SubType>
@@ -75,13 +97,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Menú_principal.resx">
-      <DependentUpon>Menú_principal.cs</DependentUpon>
+    <EmbeddedResource Include="Consignacion.resx">
+      <DependentUpon>Consignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retiro.resx">
+      <DependentUpon>Retiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tranferencias.resx">
+      <DependentUpon>Tranferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones.resx">
+      <DependentUpon>Transacciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoCuentas.resx">
+      <DependentUpon>IngresoCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_principal.resx">
+      <DependentUpon>Menu_principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Logo_Bank1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
