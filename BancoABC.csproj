@@ -48,7 +48,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup>e
     <Compile Include="Consignacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +73,9 @@
     <Compile Include="Transacciones.Designer.cs">
       <DependentUpon>Transacciones.cs</DependentUpon>
     </Compile>
+    
+    <Compile Include="BancoCuentas.cs" />
+    <Compile Include="CuentaAhorros.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
