@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BancoABC
 {
-    public partial class Menú_principal : Form
+    public partial class Menu_principal : Form
     {
-        public Menú_principal()
+        public Menu_principal()
         {
             InitializeComponent();
         }
@@ -25,13 +25,10 @@ namespace BancoABC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form IngresoCuenta = new Form2();
-
+            Menu_principal.ActiveForm.Hide();
+            Form IngresoCuenta = new Iniciar_sesion();
             IngresoCuenta.Show();
-
-
-
-
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,7 +38,7 @@ namespace BancoABC
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
