@@ -12,8 +12,9 @@ namespace BancoABC
         static void Main(string[] args)
         {
             Form IniciarApp = new Menú_principal();
-
             Application.Run(IniciarApp);
         }
+
+
     }
 }
