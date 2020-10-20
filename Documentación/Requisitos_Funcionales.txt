@@ -1,7 +1,7 @@
 -Una cuenta de ahorros con un saldo mayor o igual a 2 millones,
 inmediatamente tendrán un incremento del 5%.
 (If Saldo_inicial>=2,000,000
-	saldo_inicial+=saldo_inicial*0.05)
+	saldo_inicial+=saldo_inicial*0.05) (hacer método en la interfaz)
 
 -Crear la clase CuentaAhorros, 
 	*Numero_de_cuenta(10 digitos rando si numero ramdom = primaryy kay numero cuentas, entonces vaya reload)
