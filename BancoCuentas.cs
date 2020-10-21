@@ -18,16 +18,26 @@ namespace BancoABC
 
         public void AñadirCuenta(CuentaAhorros cuenta)
         {
+            bool existe = false;
             foreach(CuentaAhorros cuenta_comparar in Cuentas)
             {
-                if(cuenta == cuenta_comparar)
+                if(cuenta.Identificacion1 == cuenta_comparar.Identificacion1)
                 {
-                    AccountExistsException ex = new AccountExistsException("La cuenta ingresada ya existe");
-                    throw ex;
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
                 }
             }
-
-            Cuentas.Add(cuenta);
+            if(existe)
+            {
+                throw new AccountExistsException("Error, la cuenta ya existe");
+            }
+            else
+            {
+                Cuentas.Add(cuenta);
+            }
         }
 
         public bool ExisteCuenta(int numero_de_cuenta)

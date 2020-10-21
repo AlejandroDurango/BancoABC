@@ -6,7 +6,7 @@ inmediatamente tendrán un incremento del 5%.
 -Crear la clase CuentaAhorros, 
 	*Numero_de_cuenta(10 digitos rando si numero ramdom = primaryy kay numero cuentas, entonces vaya reload)
 	*Nombre_titular
-	*identificación_Titular(maximo 15caracteres )
+	*identificación_Titular(maximo 15caracteres)
 	*Saldo(Inicial,adicional,retirado,tranferido)
 	
 
