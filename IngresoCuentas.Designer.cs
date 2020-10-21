@@ -89,6 +89,7 @@
             // 
             // button_iniciar_sesion
             // 
+            this.button_iniciar_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_iniciar_sesion.Location = new System.Drawing.Point(91, 270);
             this.button_iniciar_sesion.Name = "button_iniciar_sesion";
             this.button_iniciar_sesion.Size = new System.Drawing.Size(144, 56);
@@ -100,6 +101,7 @@
             // buttonatras
             // 
             this.buttonatras.AutoSize = true;
+            this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonatras.Location = new System.Drawing.Point(240, 393);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(75, 30);
@@ -121,7 +123,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 347);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 332);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

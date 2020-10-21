@@ -41,6 +41,7 @@
             // buttonatras
             // 
             this.buttonatras.AutoSize = true;
+            this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonatras.Location = new System.Drawing.Point(12, 12);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(75, 30);
@@ -87,6 +88,7 @@
             // button_verifica_retiro
             // 
             this.button_verifica_retiro.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_verifica_retiro.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button_verifica_retiro.Location = new System.Drawing.Point(57, 307);
             this.button_verifica_retiro.Name = "button_verifica_retiro";
             this.button_verifica_retiro.Size = new System.Drawing.Size(198, 47);

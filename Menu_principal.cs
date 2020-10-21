@@ -40,5 +40,20 @@ namespace BancoABC
         {
             Application.Exit();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Menu_principal.ActiveForm.Hide();
+            Form nuevo_registro = new Registrarse();
+            nuevo_registro.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu_principal.ActiveForm.Hide();
+            Form generar_estadisticas = new Estadisticos();
+            generar_estadisticas.Show();
+        }
     }
 }
