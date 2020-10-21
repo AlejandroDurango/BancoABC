@@ -55,6 +55,18 @@
     <Compile Include="Consignacion.Designer.cs">
       <DependentUpon>Consignacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticos.Designer.cs">
+      <DependentUpon>Estadisticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrarse.Designer.cs">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tranferencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,7 +85,6 @@
     <Compile Include="Transacciones.Designer.cs">
       <DependentUpon>Transacciones.cs</DependentUpon>
     </Compile>
-    
     <Compile Include="BancoCuentas.cs" />
     <Compile Include="CuentaAhorros.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -102,6 +113,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Consignacion.resx">
       <DependentUpon>Consignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticos.resx">
+      <DependentUpon>Estadisticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrarse.resx">
+      <DependentUpon>Registrarse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Retiro.resx">
       <DependentUpon>Retiro.cs</DependentUpon>

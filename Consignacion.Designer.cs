@@ -87,6 +87,7 @@
             // buttonatras
             // 
             this.buttonatras.AutoSize = true;
+            this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonatras.Location = new System.Drawing.Point(3, 12);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(75, 30);
@@ -98,6 +99,7 @@
             // button_verifica_consignacion
             // 
             this.button_verifica_consignacion.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_verifica_consignacion.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button_verifica_consignacion.Location = new System.Drawing.Point(58, 271);
             this.button_verifica_consignacion.Name = "button_verifica_consignacion";
             this.button_verifica_consignacion.Size = new System.Drawing.Size(198, 47);
@@ -124,6 +126,7 @@
             // button_tranferir_consignacion
             // 
             this.button_tranferir_consignacion.AutoSize = true;
+            this.button_tranferir_consignacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_tranferir_consignacion.Location = new System.Drawing.Point(188, 408);
             this.button_tranferir_consignacion.Name = "button_tranferir_consignacion";
             this.button_tranferir_consignacion.Size = new System.Drawing.Size(138, 30);

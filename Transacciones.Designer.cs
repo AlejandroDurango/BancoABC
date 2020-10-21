@@ -52,6 +52,7 @@
             // button_consignar
             // 
             this.button_consignar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_consignar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button_consignar.Location = new System.Drawing.Point(64, 185);
             this.button_consignar.Name = "button_consignar";
             this.button_consignar.Size = new System.Drawing.Size(198, 47);
@@ -65,6 +66,7 @@
             // Button_retirar
             // 
             this.Button_retirar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Button_retirar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Button_retirar.Location = new System.Drawing.Point(64, 241);
             this.Button_retirar.Name = "Button_retirar";
             this.Button_retirar.Size = new System.Drawing.Size(198, 47);
@@ -78,6 +80,7 @@
             // Tranferencia
             // 
             this.Tranferencia.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Tranferencia.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Tranferencia.Location = new System.Drawing.Point(64, 303);
             this.Tranferencia.Name = "Tranferencia";
             this.Tranferencia.Size = new System.Drawing.Size(198, 47);
@@ -91,6 +94,7 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button1.Location = new System.Drawing.Point(91, 381);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 35);
