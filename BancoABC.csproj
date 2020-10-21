@@ -48,7 +48,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>e
+  <ItemGroup>
     <Compile Include="Consignacion.cs">
       <SubType>Form</SubType>
     </Compile>
