@@ -12,7 +12,8 @@ namespace BancoABC
 {
     public partial class Iniciar_sesion : Form
     {
-        
+
+        BancoCuentas banco = new BancoCuentas();
 
         public Iniciar_sesion()
         {
@@ -32,6 +33,7 @@ namespace BancoABC
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Iniciar_sesion.ActiveForm.Hide();
             Form Transacciones = new Transacciones();
             Transacciones.Show();
@@ -50,10 +52,21 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
+            foreach(CuentaAhorros cuenta in banco.getBanco())
+            {
+                if(int.Parse(cuenta_text.Text) == cuenta.Numero_de_cuenta1)
+                {
+
+                }
+            }
             Iniciar_sesion.ActiveForm.Hide();
             Form menu = new Menu_principal();
             menu.Show();
         }
-            
+
+        private void cuenta_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
