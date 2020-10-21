@@ -44,7 +44,7 @@
             // 
             this.title_tranferencias.AutoSize = true;
             this.title_tranferencias.Font = new System.Drawing.Font("Lucida Handwriting", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_tranferencias.Location = new System.Drawing.Point(-11, 114);
+            this.title_tranferencias.Location = new System.Drawing.Point(12, 111);
             this.title_tranferencias.Name = "title_tranferencias";
             this.title_tranferencias.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.title_tranferencias.Size = new System.Drawing.Size(312, 36);
@@ -54,6 +54,7 @@
             // buttonatras
             // 
             this.buttonatras.AutoSize = true;
+            this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonatras.Location = new System.Drawing.Point(12, 12);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(75, 30);
@@ -115,6 +116,7 @@
             // button_tranferir
             // 
             this.button_tranferir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_tranferir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_tranferir.Location = new System.Drawing.Point(59, 319);
             this.button_tranferir.Name = "button_tranferir";
             this.button_tranferir.Size = new System.Drawing.Size(198, 47);
@@ -139,7 +141,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
-            this.pictureBox1.Location = new System.Drawing.Point(176, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(188, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -94,9 +94,8 @@
             // 
             // button_iniciar_sesion
             // 
-            this.button_iniciar_sesion.Location = new System.Drawing.Point(61, 175);
-            this.button_iniciar_sesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button_iniciar_sesion.Name = "button_iniciar_sesion";
+            this.button_iniciar_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_iniciar_sesion.Location = new yawing.Point(91, 270);ion";
             this.button_iniciar_sesion.Size = new System.Drawing.Size(96, 36);
             this.button_iniciar_sesion.TabIndex = 5;
             this.button_iniciar_sesion.Text = "Iniciar Sesión";
@@ -106,8 +105,8 @@
             // buttonatras
             // 
             this.buttonatras.AutoSize = true;
-            this.buttonatras.Location = new System.Drawing.Point(160, 255);
-            this.buttonatras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonatras.Location = new System.Drawing.Point(240, 393);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(50, 23);
             this.buttonatras.TabIndex = 10;
@@ -128,10 +127,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 226);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Location = new System.Drawing.Point(111, 332);
+            this.pictureBox1.Locatn = new System.Drawing.Point(14, 226);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2); master         this.pictureBox1.Name="picture";
             this.pictureBox1.Size = new System.Drawing.Size(67, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
