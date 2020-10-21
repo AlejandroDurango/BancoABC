@@ -37,8 +37,10 @@ namespace BancoABC
                 AccountNoExistException ex = new AccountNoExistException("No existe el número de cuenta ingresado");
                 throw ex;
             }
-
-            return resultado;
+            else
+            {
+                return resultado;
+            }
         }
 
         public void Retirar(int saldo_retirar)
