@@ -10,9 +10,22 @@ namespace BancoABC
     class Principal
     {
         static void Main(string[] args)
-        {   Form IniciarApp = new Menu_principal();
-            Application.Run(IniciarApp);
-        }
+
+        {   Form IniciarApp = new
+using System.Windows.Forms;
+
+namespace BancoABC
+{
+    class Principal
+    {
+        static void Main(string[] args)
+        {   Form IniciarApp = new M
+          enu_principal();
+
+
+    }
+} M
+          enu_principal();
 
 
     }
