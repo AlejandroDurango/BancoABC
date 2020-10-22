@@ -74,13 +74,6 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            foreach(CuentaAhorros cuenta in banco.getBanco())
-            {
-                if(int.Parse(cuenta_text.Text) == cuenta.Numero_de_cuenta1)
-                {
-
-                }
-            }
             Iniciar_sesion.ActiveForm.Hide();
             Form menu = new Menu_principal();
             menu.Show();

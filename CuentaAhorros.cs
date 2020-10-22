@@ -58,8 +58,7 @@ namespace BancoABC
 
         public void Transferir(int numero_cuenta_destino, int monto)
         {
-            BancoCuentas banco = new BancoCuentas();
-            List<CuentaAhorros> lista_cuentas = banco.getBanco();
+            List<CuentaAhorros> lista_cuentas = BancoCuentas.getBanco();
             foreach(CuentaAhorros cuenta in lista_cuentas)
             {
                 if(numero_cuenta_destino == cuenta.Numero_de_cuenta1)

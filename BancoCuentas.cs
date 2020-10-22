@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace BancoABC
 {
-    class BancoCuentas
+    public class BancoCuentas
     {
        
-        private List<CuentaAhorros> Cuentas;
+        private static List<CuentaAhorros> Cuentas;
 
         public  BancoCuentas()
         {
-            Cuentas = new List<CuentaAhorros>();
-             
+            Cuentas = new List<CuentaAhorros>();             
         }
 
         public class Variables
@@ -54,7 +53,7 @@ namespace BancoABC
             return false;
         }
 
-        public List<CuentaAhorros> getBanco()
+        public static List<CuentaAhorros> getBanco()
         {
             return Cuentas;
         }

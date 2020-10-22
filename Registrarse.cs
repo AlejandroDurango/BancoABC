@@ -19,9 +19,9 @@ namespace BancoABC
         public Registrarse()
         {
             InitializeComponent();
-            List<CuentaAhorros> cuentas = banco.getBanco();
+            Console.WriteLine(BancoCuentas.getBanco().Count);
         }
-
+      
         private void buttonatras_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -53,8 +53,7 @@ namespace BancoABC
             try
             {
                 int cont = 0;
-                List<CuentaAhorros> cuentas = banco.getBanco();
-                if (cuentas.Count == 0)
+                if (BancoCuentas.getBanco().Count == 0)
                 {
                     banco.AñadirCuenta(Nueva_cuenta);
                     Textbox_nombres.ResetText();
@@ -67,13 +66,13 @@ namespace BancoABC
                     label_anota.ForeColor = System.Drawing.Color.Green;
                     label_cuenta.Text = Numero_de_cuenta.ToString();
                     label_cuenta.ForeColor = System.Drawing.Color.Green;
-
+                    cont = 0;
                 }
                 else
                 {
-                    while (cont <= cuentas.Count)
+                    while (cont <= BancoCuentas.getBanco().Count)
                     {
-                        if (Nueva_cuenta.Identificacion1 == cuentas[cont].Identificacion1)
+                        if (Nueva_cuenta.Identificacion1 == BancoCuentas.getBanco()[cont].Identificacion1)
                         {
                             throw new AccountExistsException("Error, Usuario ya registrado");
                         }
@@ -88,7 +87,7 @@ namespace BancoABC
                     textBox_saldo.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
-                    Console.WriteLine("hola3");
+                    cont = 0;
                 }
                 
 
