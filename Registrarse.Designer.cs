@@ -48,9 +48,10 @@
             // 
             this.buttonatras.AutoSize = true;
             this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonatras.Location = new System.Drawing.Point(12, 12);
+            this.buttonatras.Location = new System.Drawing.Point(8, 8);
+            this.buttonatras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonatras.Name = "buttonatras";
-            this.buttonatras.Size = new System.Drawing.Size(75, 30);
+            this.buttonatras.Size = new System.Drawing.Size(50, 23);
             this.buttonatras.TabIndex = 23;
             this.buttonatras.Text = "Atras";
             this.buttonatras.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@
             // button_Registrook
             // 
             this.button_Registrook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Registrook.Location = new System.Drawing.Point(113, 341);
+            this.button_Registrook.Location = new System.Drawing.Point(75, 222);
+            this.button_Registrook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Registrook.Name = "button_Registrook";
-            this.button_Registrook.Size = new System.Drawing.Size(117, 50);
+            this.button_Registrook.Size = new System.Drawing.Size(78, 32);
             this.button_Registrook.TabIndex = 24;
             this.button_Registrook.Text = "Registrar";
             this.button_Registrook.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@
             // label_nombre
             // 
             this.label_nombre.AutoSize = true;
-            this.label_nombre.Location = new System.Drawing.Point(12, 195);
+            this.label_nombre.Location = new System.Drawing.Point(8, 127);
+            this.label_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_nombre.Name = "label_nombre";
-            this.label_nombre.Size = new System.Drawing.Size(77, 24);
+            this.label_nombre.Size = new System.Drawing.Size(53, 17);
             this.label_nombre.TabIndex = 25;
             this.label_nombre.Text = "Nombres:";
             this.label_nombre.UseCompatibleTextRendering = true;
@@ -84,20 +87,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Textbox_nombres.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.Textbox_nombres.Location = new System.Drawing.Point(113, 192);
+            this.Textbox_nombres.Location = new System.Drawing.Point(75, 124);
+            this.Textbox_nombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Textbox_nombres.Name = "Textbox_nombres";
-            this.Textbox_nombres.Size = new System.Drawing.Size(230, 26);
+            this.Textbox_nombres.Size = new System.Drawing.Size(155, 20);
             this.Textbox_nombres.TabIndex = 26;
             this.Textbox_nombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Textbox_nombres.TextChanged += new System.EventHandler(this.Textbox_nombres_TextChanged);
+            this.Textbox_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Textbox_nombres_KeyPress);
             // 
             // label_registrate
             // 
             this.label_registrate.AutoSize = true;
             this.label_registrate.Font = new System.Drawing.Font("Script MT Bold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_registrate.Location = new System.Drawing.Point(48, 110);
+            this.label_registrate.Location = new System.Drawing.Point(32, 71);
+            this.label_registrate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_registrate.Name = "label_registrate";
-            this.label_registrate.Size = new System.Drawing.Size(235, 58);
+            this.label_registrate.Size = new System.Drawing.Size(159, 38);
             this.label_registrate.TabIndex = 27;
             this.label_registrate.Text = "Registrate:";
             this.label_registrate.Click += new System.EventHandler(this.label1_Click);
@@ -105,9 +111,10 @@
             // label_apellidos
             // 
             this.label_apellidos.AutoSize = true;
-            this.label_apellidos.Location = new System.Drawing.Point(12, 234);
+            this.label_apellidos.Location = new System.Drawing.Point(8, 152);
+            this.label_apellidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_apellidos.Name = "label_apellidos";
-            this.label_apellidos.Size = new System.Drawing.Size(78, 24);
+            this.label_apellidos.Size = new System.Drawing.Size(53, 17);
             this.label_apellidos.TabIndex = 28;
             this.label_apellidos.Text = "Apellidos:";
             this.label_apellidos.UseCompatibleTextRendering = true;
@@ -120,18 +127,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TextBox_apellidos.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.TextBox_apellidos.Location = new System.Drawing.Point(113, 234);
+            this.TextBox_apellidos.Location = new System.Drawing.Point(75, 152);
+            this.TextBox_apellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextBox_apellidos.Name = "TextBox_apellidos";
-            this.TextBox_apellidos.Size = new System.Drawing.Size(230, 26);
+            this.TextBox_apellidos.Size = new System.Drawing.Size(155, 20);
             this.TextBox_apellidos.TabIndex = 29;
             this.TextBox_apellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBox_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_apellidos_KeyPress);
             // 
             // label_indentificación
             // 
             this.label_indentificación.AutoSize = true;
-            this.label_indentificación.Location = new System.Drawing.Point(0, 272);
+            this.label_indentificación.Location = new System.Drawing.Point(0, 177);
+            this.label_indentificación.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_indentificación.Name = "label_indentificación";
-            this.label_indentificación.Size = new System.Drawing.Size(107, 24);
+            this.label_indentificación.Size = new System.Drawing.Size(74, 17);
             this.label_indentificación.TabIndex = 30;
             this.label_indentificación.Text = "Identificación:";
             this.label_indentificación.UseCompatibleTextRendering = true;
@@ -144,30 +154,34 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_identificación.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.textBox_identificación.Location = new System.Drawing.Point(113, 269);
+            this.textBox_identificación.Location = new System.Drawing.Point(75, 175);
+            this.textBox_identificación.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_identificación.Name = "textBox_identificación";
-            this.textBox_identificación.Size = new System.Drawing.Size(230, 26);
+            this.textBox_identificación.Size = new System.Drawing.Size(155, 20);
             this.textBox_identificación.TabIndex = 31;
             this.textBox_identificación.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_identificación.TextChanged += new System.EventHandler(this.textBox_identificación_TextChanged);
+            this.textBox_identificación.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_identificación_KeyPress);
             // 
             // label_result_registrarse
             // 
             this.label_result_registrarse.AutoSize = true;
             this.label_result_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_result_registrarse.ForeColor = System.Drawing.Color.Black;
-            this.label_result_registrarse.Location = new System.Drawing.Point(21, 403);
+            this.label_result_registrarse.Location = new System.Drawing.Point(14, 262);
+            this.label_result_registrarse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_result_registrarse.Name = "label_result_registrarse";
-            this.label_result_registrarse.Size = new System.Drawing.Size(317, 20);
+            this.label_result_registrarse.Size = new System.Drawing.Size(224, 13);
             this.label_result_registrarse.TabIndex = 32;
             this.label_result_registrarse.Text = "Unete a Nosotros y ¡Crecemos Juntos!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -175,9 +189,10 @@
             // label_saldo
             // 
             this.label_saldo.AutoSize = true;
-            this.label_saldo.Location = new System.Drawing.Point(34, 305);
+            this.label_saldo.Location = new System.Drawing.Point(23, 198);
+            this.label_saldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_saldo.Name = "label_saldo";
-            this.label_saldo.Size = new System.Drawing.Size(53, 24);
+            this.label_saldo.Size = new System.Drawing.Size(36, 17);
             this.label_saldo.TabIndex = 33;
             this.label_saldo.Text = "Saldo:";
             this.label_saldo.UseCompatibleTextRendering = true;
@@ -189,17 +204,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_saldo.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.textBox_saldo.Location = new System.Drawing.Point(113, 301);
+            this.textBox_saldo.Location = new System.Drawing.Point(75, 196);
+            this.textBox_saldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_saldo.Name = "textBox_saldo";
-            this.textBox_saldo.Size = new System.Drawing.Size(230, 26);
+            this.textBox_saldo.Size = new System.Drawing.Size(155, 20);
             this.textBox_saldo.TabIndex = 34;
             this.textBox_saldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_saldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_saldo_KeyPress);
             // 
             // Registrarse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 450);
+            this.ClientSize = new System.Drawing.Size(233, 292);
             this.Controls.Add(this.textBox_saldo);
             this.Controls.Add(this.label_saldo);
             this.Controls.Add(this.label_result_registrarse);
@@ -213,6 +230,7 @@
             this.Controls.Add(this.button_Registrook);
             this.Controls.Add(this.buttonatras);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Registrarse";
             this.Text = "Registrarse";
             this.Load += new System.EventHandler(this.Registrarse_Load);

@@ -13,6 +13,8 @@ namespace BancoABC
 {
     public partial class Registrarse : Form
     {
+        BancoCuentas banco = new BancoCuentas();
+        ControlValidacion validacion = new ControlValidacion();
         public Registrarse()
         {
             InitializeComponent();
@@ -31,12 +33,12 @@ namespace BancoABC
             Random random = new Random();
             int Numero_de_cuenta = random.Next(100000001,int.MaxValue);
             String Nombre = (Textbox_nombres.Text +  " " + TextBox_apellidos.Text);
-            int Identificacion = int.Parse(textBox_identificación.Text);
+            double Identificacion = double.Parse(textBox_identificación.Text);
             int Saldoinicial = int.Parse(textBox_saldo.Text);
             double Saldo = 0;
             if (Saldoinicial >= 2000000)
             {
-                   Saldo = Saldoinicial *0.05 + Saldoinicial;
+                Saldo = Saldoinicial *0.05 + Saldoinicial;
             } 
             else
             {
@@ -44,16 +46,59 @@ namespace BancoABC
             }
 
             CuentaAhorros Nueva_cuenta = new CuentaAhorros(Numero_de_cuenta, Nombre, Identificacion, Saldo);
-            BancoCuentas banco = new BancoCuentas();
+            
 
-            banco.AñadirCuenta(Nueva_cuenta);
+            try
+            {
+                int cont = 0;
+                List<CuentaAhorros> cuentas = banco.getBanco();
+                if(cuentas.Count == 0)
+                {
+                    banco.AñadirCuenta(Nueva_cuenta);
+                    Textbox_nombres.ResetText();
+                    TextBox_apellidos.ResetText();
+                    textBox_identificación.ResetText();
+                    textBox_saldo.ResetText();
+                    label_result_registrarse.Text = "Registro Exitoso";
+                    label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    Console.WriteLine("hola1");
+                }
+                else
+                {
+                    while (cont <= cuentas.Count)
+                    {
+                        if (Nueva_cuenta.Identificacion1 == cuentas[cont].Identificacion1)
+                        {
+                            throw new AccountExistsException("Error, Usuario ya registrado");
+                        }
+                        cont++;
+                        Console.WriteLine("hola2");
+                    }
 
-            Textbox_nombres.ResetText();
-            TextBox_apellidos.ResetText();
-            textBox_identificación.ResetText();
-            textBox_saldo.ResetText();
-            label_result_registrarse.Text = "Registro Exitoso";
-            label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    banco.AñadirCuenta(Nueva_cuenta);
+                    Textbox_nombres.ResetText();
+                    TextBox_apellidos.ResetText();
+                    textBox_identificación.ResetText();
+                    textBox_saldo.ResetText();
+                    label_result_registrarse.Text = "Registro Exitoso";
+                    label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    Console.WriteLine("hola3");
+                }
+                
+
+            }
+            catch(AccountExistsException ex)
+            {
+                label_result_registrarse.Text = ex.getMensaje();
+                label_result_registrarse.ForeColor = System.Drawing.Color.Red;
+            }
+            finally
+            {
+                Textbox_nombres.ResetText();
+                TextBox_apellidos.ResetText();
+                textBox_identificación.ResetText();
+                textBox_saldo.ResetText();
+            }
 
         }
 
@@ -87,25 +132,24 @@ namespace BancoABC
             
         }
 
-        private void textBox_identificación_KeyPress(Object sender, KeyPressEventArgs e)
+        private void Textbox_nombres_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            validacion.OnlyLetters(e);
         }
 
+        private void TextBox_apellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.OnlyLetters(e);
+        }
+
+        private void textBox_identificación_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.OnlyNumbers(e);
+        }
+
+        private void textBox_saldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.OnlyNumbers(e);
+        }
     }
 }

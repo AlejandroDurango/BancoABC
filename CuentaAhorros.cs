@@ -12,10 +12,10 @@ namespace BancoABC
     {
         private int Numero_de_cuenta;
         private String Nombre_titular;
-        private int Identificacion;
+        private double Identificacion;
         private double Saldo;
 
-        public CuentaAhorros(int numero_de_cuenta, string nombre_titular, int identificacion, double saldo)
+        public CuentaAhorros(int numero_de_cuenta, string nombre_titular, double identificacion, double saldo)
         {
             Numero_de_cuenta = numero_de_cuenta;
             Nombre_titular = nombre_titular;
@@ -25,7 +25,7 @@ namespace BancoABC
 
         public int Numero_de_cuenta1 { get => Numero_de_cuenta; set => Numero_de_cuenta = value; }
         public string Nombre_titular1 { get => Nombre_titular; set => Nombre_titular = value; }
-        public int Identificacion1 { get => Identificacion; set => Identificacion = value; }
+        public double Identificacion1 { get => Identificacion; set => Identificacion = value; }
         public double Saldo1 { get => Saldo; set => Saldo = value; }
 
         public bool Consignar(int numero_de_cuenta)
