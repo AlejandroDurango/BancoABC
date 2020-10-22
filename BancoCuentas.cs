@@ -9,16 +9,27 @@ namespace BancoABC
 {
     class BancoCuentas
     {
+        Registrarse envio_datos = new Registrarse();
         private List<CuentaAhorros> Cuentas;
 
-        public BancoCuentas()
+        public  BancoCuentas()
         {
             Cuentas = new List<CuentaAhorros>();
+
+        }
+        public void actualizar_lista(Registrarse envio_datos )
+        {
+            //Cuentas += envio_datos.;
         }
 
         public void AñadirCuenta(CuentaAhorros cuenta)
         {
            Cuentas.Add(cuenta);
+        }
+
+        public void actualizar (BancoCuentas Cuenta)
+        {
+            //Cuentas.Add(Cuenta);
         }
 
         // referenciado en CuentaAhorros para implementar método consignar
@@ -40,15 +51,16 @@ namespace BancoABC
             return Cuentas;
         }
 
-        public bool IniciarSesion(int numero_cuenta, int identificacion)
-        {
+        
+        public bool IniciarSesion(int numero_cuenta, double identificacion)
+        {  ;
             foreach(CuentaAhorros cuenta in Cuentas)
             {
-                if(numero_cuenta == cuenta.Numero_de_cuenta1)
+              if(numero_cuenta == cuenta.Numero_de_cuenta1)
                 {
                     if(identificacion == cuenta.Identificacion1)
                     {
-                        return true;
+                        return true ;
                     }
                 }
             }

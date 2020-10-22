@@ -122,11 +122,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Iniciar_sesion;
         private System.Windows.Forms.Button Button_Registrarse;
         private System.Windows.Forms.Button Estadisticos;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Button Exit;
+        public System.Windows.Forms.Button Iniciar_sesion;
     }
 }
