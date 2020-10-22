@@ -13,7 +13,12 @@ namespace BancoABC
         {   Form IniciarApp = new Menu_principal();
             Application.Run(IniciarApp);
         }
-
-
+       
+        public void actualizar(CuentaAhorros cuenta)
+        {
+            
+       
+        }
+        
     }
 }

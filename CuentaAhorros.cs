@@ -22,7 +22,7 @@ namespace BancoABC
             Identificacion = identificacion;
             Saldo = saldo;
         }
-
+        
         public int Numero_de_cuenta1 { get => Numero_de_cuenta; set => Numero_de_cuenta = value; }
         public string Nombre_titular1 { get => Nombre_titular; set => Nombre_titular = value; }
         public double Identificacion1 { get => Identificacion; set => Identificacion = value; }
