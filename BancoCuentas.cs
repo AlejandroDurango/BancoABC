@@ -9,12 +9,20 @@ namespace BancoABC
 {
     class BancoCuentas
     {
-        Registrarse envio_datos = new Registrarse();
+       
         private List<CuentaAhorros> Cuentas;
 
         public  BancoCuentas()
         {
             Cuentas = new List<CuentaAhorros>();
+             
+        }
+
+        public class Variables
+         {
+            public static Menu_principal Menu_Principal = new Menu_principal() ;
+            public static Registrarse Registrarse = new Registrarse();
+            public static Iniciar_sesion Iniciar_Sesion = new Iniciar_sesion();
 
         }
         public void actualizar_lista(Registrarse envio_datos )
