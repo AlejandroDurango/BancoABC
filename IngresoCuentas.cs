@@ -33,6 +33,7 @@ namespace BancoABC
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Iniciar_sesion.ActiveForm.Hide();
             Form Transacciones = new Transacciones();
             Transacciones.Show();
