@@ -13,6 +13,7 @@ namespace BancoABC
 {
     public partial class Registrarse : Form
     {
+        BancoCuentas banco = new BancoCuentas();
         ControlValidacion validacion = new ControlValidacion();
         public Registrarse()
         {
@@ -45,17 +46,46 @@ namespace BancoABC
             }
 
             CuentaAhorros Nueva_cuenta = new CuentaAhorros(Numero_de_cuenta, Nombre, Identificacion, Saldo);
-            BancoCuentas banco = new BancoCuentas();
+            
 
             try
             {
-                banco.AñadirCuenta(Nueva_cuenta);
-                Textbox_nombres.ResetText();
-                TextBox_apellidos.ResetText();
-                textBox_identificación.ResetText();
-                textBox_saldo.ResetText();
-                label_result_registrarse.Text = "Registro Exitoso";
-                label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                int cont = 0;
+                List<CuentaAhorros> cuentas = banco.getBanco();
+                if(cuentas.Count == 0)
+                {
+                    banco.AñadirCuenta(Nueva_cuenta);
+                    Textbox_nombres.ResetText();
+                    TextBox_apellidos.ResetText();
+                    textBox_identificación.ResetText();
+                    textBox_saldo.ResetText();
+                    label_result_registrarse.Text = "Registro Exitoso";
+                    label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    Console.WriteLine("hola1");
+                }
+                else
+                {
+                    while (cont <= cuentas.Count)
+                    {
+                        if (Nueva_cuenta.Identificacion1 == cuentas[cont].Identificacion1)
+                        {
+                            throw new AccountExistsException("Error, Usuario ya registrado");
+                        }
+                        cont++;
+                        Console.WriteLine("hola2");
+                    }
+
+                    banco.AñadirCuenta(Nueva_cuenta);
+                    Textbox_nombres.ResetText();
+                    TextBox_apellidos.ResetText();
+                    textBox_identificación.ResetText();
+                    textBox_saldo.ResetText();
+                    label_result_registrarse.Text = "Registro Exitoso";
+                    label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    Console.WriteLine("hola3");
+                }
+                
+
             }
             catch(AccountExistsException ex)
             {
