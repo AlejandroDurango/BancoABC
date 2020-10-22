@@ -24,9 +24,10 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            Registrarse.ActiveForm.Hide();
-            Form menu = new Menu_principal();
-            menu.Show();
+            this.Hide();
+            BancoCuentas.Variables.Menu_Principal.Visible = true;
+
+
         }
 
         private void button_iniciar_sesion_Click(object sender, EventArgs e)

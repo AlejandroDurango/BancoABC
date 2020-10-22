@@ -10,7 +10,7 @@ namespace BancoABC
     class Principal
     {
         static void Main(string[] args)
-        {   Form IniciarApp = new Menu_principal();
+        {   Form IniciarApp = BancoCuentas.Variables.Menu_Principal;
             Application.Run(IniciarApp);
         }
        

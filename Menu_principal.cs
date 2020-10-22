@@ -25,9 +25,8 @@ namespace BancoABC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu_principal.ActiveForm.Hide();
-            Form IngresoCuenta = new Iniciar_sesion();
-            IngresoCuenta.Show();
+            this.Visible =false;
+            BancoCuentas.Variables.Iniciar_Sesion.Show();
            
         }
 
@@ -43,9 +42,10 @@ namespace BancoABC
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Menu_principal.ActiveForm.Hide();
-            Form nuevo_registro = new Registrarse();
-            nuevo_registro.Show();
+            this.Visible = false;
+            BancoCuentas.Variables.Registrarse.Show();
+
+
 
         }
 

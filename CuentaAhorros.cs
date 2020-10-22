@@ -8,7 +8,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace BancoABC
 {
-    class CuentaAhorros
+    public class CuentaAhorros
     {
         private int Numero_de_cuenta;
         private String Nombre_titular;
