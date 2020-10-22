@@ -12,12 +12,14 @@ using System.Windows.Forms;
 namespace BancoABC
 {
     public partial class Registrarse : Form
-    {
+    {   
         BancoCuentas banco = new BancoCuentas();
         ControlValidacion validacion = new ControlValidacion();
+
         public Registrarse()
         {
             InitializeComponent();
+            List<CuentaAhorros> cuentas = banco.getBanco();
         }
 
         private void buttonatras_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace BancoABC
 
         private void button_iniciar_sesion_Click(object sender, EventArgs e)
         {
-
+            
             Random random = new Random();
             int Numero_de_cuenta = random.Next(100000001,int.MaxValue);
             String Nombre = (Textbox_nombres.Text +  " " + TextBox_apellidos.Text);
@@ -46,13 +48,12 @@ namespace BancoABC
             }
 
             CuentaAhorros Nueva_cuenta = new CuentaAhorros(Numero_de_cuenta, Nombre, Identificacion, Saldo);
-            
 
             try
             {
                 int cont = 0;
                 List<CuentaAhorros> cuentas = banco.getBanco();
-                if(cuentas.Count == 0)
+                if (cuentas.Count == 0)
                 {
                     banco.AñadirCuenta(Nueva_cuenta);
                     Textbox_nombres.ResetText();
@@ -61,7 +62,11 @@ namespace BancoABC
                     textBox_saldo.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
-                    Console.WriteLine("hola1");
+                    label_anota.Text = "Tu numero de Cuenta es:";
+                    label_anota.ForeColor = System.Drawing.Color.Green;
+                    label_cuenta.Text = Numero_de_cuenta.ToString();
+                    label_cuenta.ForeColor = System.Drawing.Color.Green;
+
                 }
                 else
                 {
@@ -99,7 +104,8 @@ namespace BancoABC
                 textBox_identificación.ResetText();
                 textBox_saldo.ResetText();
             }
-
+            
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

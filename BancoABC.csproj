@@ -99,11 +99,11 @@
     <Compile Include="Menu_principal.Designer.cs">
       <DependentUpon>Menu_principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="IngresoCuentas.cs">
+    <Compile Include="Iniciar_sesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngresoCuentas.Designer.cs">
-      <DependentUpon>IngresoCuentas.cs</DependentUpon>
+    <Compile Include="Iniciar_sesion.Designer.cs">
+      <DependentUpon>Iniciar_sesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="Transacciones.resx">
       <DependentUpon>Transacciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IngresoCuentas.resx">
-      <DependentUpon>IngresoCuentas.cs</DependentUpon>
+    <EmbeddedResource Include="Iniciar_sesion.resx">
+      <DependentUpon>Iniciar_sesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_principal.resx">
       <DependentUpon>Menu_principal.cs</DependentUpon>
