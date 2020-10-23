@@ -19,9 +19,8 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            Estadisticos.ActiveForm.Hide();
-            Form menu = new Menu_principal();
-            menu.Show();
+            this.Hide();
+            BancoCuentas.Variables.Menu_Principal.Visible = true ;
         }
 
         private void label2_Click(object sender, EventArgs e)

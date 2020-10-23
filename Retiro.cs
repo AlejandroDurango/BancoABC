@@ -19,14 +19,28 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            Retiro.ActiveForm.Hide();
-            Form anterior = new Transacciones();
-            anterior.Show();
+            this.Hide();
+            BancoCuentas.Variables.Transacciones.Visible = true;
         }
 
         private void Retiro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_verifica_retiro_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int monto = int.Parse(TextBox_monto_retirar.Text);
+                
+
+            }
+            catch 
+            {
+            }
+            
         }
     }
 }

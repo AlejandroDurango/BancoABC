@@ -40,13 +40,13 @@ namespace BancoABC
                 int contraseña = int.Parse(contraseña_text.Text);
                 if (banco.IniciarSesion(contraseña) == true)
                 {
-                    Iniciar_sesion.ActiveForm.Hide();
-                    Form Transacciones = new Transacciones();
-                    Transacciones.Show();
+                    this.Hide();
+                    this.label2.Text = "Ingresa a Tus Sueños";
+                    BancoCuentas.Variables.Transacciones.Show();
                 }
                 else
                 {
-                    throw new AccountExistsException("Datos incorrectos,Por favor verificalos");
+                    throw new AccountExistsException("No existe el número de cuenta ingresado");
                 }
             }
             catch (AccountExistsException ex)
@@ -54,7 +54,7 @@ namespace BancoABC
                 label2.Text = ex.getMensaje();
                 label2.ForeColor = System.Drawing.Color.Red;
             }
-            catch(FormatException ex)
+            catch(FormatException )
             {
                 label2.Text = "campos vacio, no se reconoce usuario";
                 label2.ForeColor = System.Drawing.Color.Red;
@@ -77,9 +77,8 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            Iniciar_sesion.ActiveForm.Hide();
-            Form menu = new Menu_principal();
-            menu.Show();
+            this.Hide();
+            BancoCuentas.Variables.Menu_Principal.Visible = true;
         }
         private void cuenta_text_KeyPress(object sender, KeyPressEventArgs e)
         {

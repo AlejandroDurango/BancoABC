@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.VisualStyles;
 
 namespace BancoABC
 {
     public class CuentaAhorros
     {
+
         private int Numero_de_cuenta;
         private String Nombre_titular;
         private double Identificacion;
-        private double Saldo;
+        private static double Saldo;
         private int Pin;
 
         public CuentaAhorros(int numero_de_cuenta, string nombre_titular, double identificacion, double saldo, int pin)
@@ -24,18 +19,18 @@ namespace BancoABC
             Saldo = saldo;
             Pin = pin;
         }
-        
+
         public int Numero_de_cuenta1 { get => Numero_de_cuenta; set => Numero_de_cuenta = value; }
         public string Nombre_titular1 { get => Nombre_titular; set => Nombre_titular = value; }
         public double Identificacion1 { get => Identificacion; set => Identificacion = value; }
-        public double Saldo1 { get => Saldo; set => Saldo = value; }
+        public static double Saldo1 { get => Saldo; set => Saldo = value; }
         public int Pin1 { get => Pin; set => Pin = value; }
 
-        public bool Consignar(int numero_de_cuenta)
+        public static bool Consignar(int numero_de_cuenta)
         {
-            BancoCuentas banco = new BancoCuentas();
-            bool resultado = banco.ExisteCuenta(numero_de_cuenta);
-            if(!resultado)
+            
+            bool resultado = BancoCuentas.ExisteCuenta(numero_de_cuenta);
+            if (!resultado)
             {
                 AccountNoExistException ex = new AccountNoExistException("No existe el número de cuenta ingresado");
                 throw ex;
@@ -46,11 +41,11 @@ namespace BancoABC
             }
         }
 
-        public void Retirar(int saldo_retirar)
+        public static void Retirar(int saldo_retirar)
         {
-            if(saldo_retirar < Saldo)
+            if (saldo_retirar < Saldo)
             {
-                AmountInsufficientException ex = new AmountInsufficientException("Fondos insuficientes, tu saldo es: "+ Saldo);
+                AmountInsufficientException ex = new AmountInsufficientException("Fondos insuficientes, tu saldo es: " + Saldo);
                 throw ex;
             }
             else
@@ -59,20 +54,21 @@ namespace BancoABC
             }
         }
 
-        public void Transferir(int numero_cuenta_destino, int monto)
+        public static void Transferir(int numero_cuenta_destino, int monto)
         {
-            List<CuentaAhorros> lista_cuentas = BancoCuentas.getBanco();
-            foreach(CuentaAhorros cuenta in lista_cuentas)
+
+            foreach (CuentaAhorros cuenta in BancoCuentas.getBanco())
             {
-                if(numero_cuenta_destino == cuenta.Numero_de_cuenta1)
+                if (numero_cuenta_destino == cuenta.Numero_de_cuenta1)
                 {
-                    if(monto <= 0)
+                    if (monto <= 0)
                     {
                         NegativeAmountException ex = new NegativeAmountException("El monto a transferir no puede ser negativo");
+
                     }
                     else
                     {
-                        cuenta.Saldo += monto;
+                        CuentaAhorros.Saldo += monto;
                     }
                 }
             }

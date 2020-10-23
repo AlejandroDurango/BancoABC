@@ -97,6 +97,7 @@
             this.button_verifica_retiro.UseCompatibleTextRendering = true;
             this.button_verifica_retiro.UseVisualStyleBackColor = true;
             this.button_verifica_retiro.UseWaitCursor = true;
+            this.button_verifica_retiro.Click += new System.EventHandler(this.button_verifica_retiro_Click);
             // 
             // label_result_retiro
             // 
@@ -113,7 +114,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
-            this.pictureBox2.Location = new System.Drawing.Point(197, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(155, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
