@@ -124,6 +124,7 @@
             this.button_tranferir.Text = "TRANSFERIR";
             this.button_tranferir.UseCompatibleTextRendering = true;
             this.button_tranferir.UseVisualStyleBackColor = true;
+            this.button_tranferir.Click += new System.EventHandler(this.button_tranferir_Click);
             // 
             // label_result_transferencia
             // 
@@ -136,7 +137,7 @@
             this.label_result_transferencia.Size = new System.Drawing.Size(282, 20);
             this.label_result_transferencia.TabIndex = 19;
             this.label_result_transferencia.Text = "¡Transfiere Amor, pero con proteccion !";
-            this.label_result_transferencia.Click += new System.EventHandler(this.label_result_retiro_Click);
+     
             // 
             // pictureBox1
             // 

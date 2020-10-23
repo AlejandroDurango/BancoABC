@@ -51,9 +51,8 @@ namespace BancoABC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Menu_principal.ActiveForm.Hide();
-            Form generar_estadisticas = new Estadisticos();
-            generar_estadisticas.Show();
+            this.Visible = false;
+            BancoCuentas.Variables.Estadisticos.Show();
         }
     }
 }

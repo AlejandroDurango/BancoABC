@@ -34,7 +34,7 @@
             this.label_result_consignacion = new System.Windows.Forms.Label();
             this.buttonatras = new System.Windows.Forms.Button();
             this.button_verifica_consignacion = new System.Windows.Forms.Button();
-            this.label_result_retiro = new System.Windows.Forms.Label();
+            this.label_result_consigna = new System.Windows.Forms.Label();
             this.button_tranferir_consignacion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +52,7 @@
             this.cuenta_consignacion_text.Size = new System.Drawing.Size(170, 26);
             this.cuenta_consignacion_text.TabIndex = 3;
             this.cuenta_consignacion_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cuenta_consignacion_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cuenta_consignacion_text_KeyPress);
             // 
             // title_consignacion
             // 
@@ -63,7 +64,7 @@
             this.title_consignacion.Size = new System.Drawing.Size(312, 36);
             this.title_consignacion.TabIndex = 4;
             this.title_consignacion.Text = "Ingresa los datos.";
-            this.title_consignacion.Click += new System.EventHandler(this.title_whatdoing_Click);
+            
             // 
             // label_cuenta_consignacion
             // 
@@ -110,18 +111,18 @@
             this.button_verifica_consignacion.UseWaitCursor = true;
             this.button_verifica_consignacion.Click += new System.EventHandler(this.button_verifica_consignacion_Click);
             // 
-            // label_result_retiro
+            // label_result_consigna
             // 
-            this.label_result_retiro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label_result_consigna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_result_retiro.AutoSize = true;
-            this.label_result_retiro.Location = new System.Drawing.Point(38, 367);
-            this.label_result_retiro.Name = "label_result_retiro";
-            this.label_result_retiro.Size = new System.Drawing.Size(274, 20);
-            this.label_result_retiro.TabIndex = 18;
-            this.label_result_retiro.Text = "¡Tu tienes la plata , nosotros el medio!";
-            this.label_result_retiro.Click += new System.EventHandler(this.label_result_retiro_Click);
+            this.label_result_consigna.AutoSize = true;
+            this.label_result_consigna.Location = new System.Drawing.Point(38, 367);
+            this.label_result_consigna.Name = "label_result_consigna";
+            this.label_result_consigna.Size = new System.Drawing.Size(274, 20);
+            this.label_result_consigna.TabIndex = 18;
+            this.label_result_consigna.Text = "¡Tu tienes la plata , nosotros el medio!";
+           
             // 
             // button_tranferir_consignacion
             // 
@@ -152,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(338, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_tranferir_consignacion);
-            this.Controls.Add(this.label_result_retiro);
+            this.Controls.Add(this.label_result_consigna);
             this.Controls.Add(this.button_verifica_consignacion);
             this.Controls.Add(this.buttonatras);
             this.Controls.Add(this.label_result_consignacion);
@@ -177,7 +178,7 @@
         private System.Windows.Forms.Label label_result_consignacion;
         private System.Windows.Forms.Button buttonatras;
         private System.Windows.Forms.Button button_verifica_consignacion;
-        private System.Windows.Forms.Label label_result_retiro;
+        private System.Windows.Forms.Label label_result_consigna;
         private System.Windows.Forms.Button button_tranferir_consignacion;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

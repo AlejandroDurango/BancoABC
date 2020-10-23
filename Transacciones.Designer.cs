@@ -47,7 +47,7 @@
             this.title_transacciones.Size = new System.Drawing.Size(322, 36);
             this.title_transacciones.TabIndex = 5;
             this.title_transacciones.Text = "¿Que desea hacer?";
-            this.title_transacciones.Click += new System.EventHandler(this.title_consignacion_Click);
+           
             // 
             // button_consignar
             // 

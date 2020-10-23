@@ -18,16 +18,16 @@ namespace BancoABC
         }
 
         public class Variables
-         {
-            public static Menu_principal Menu_Principal = new Menu_principal() ;
+        {
+            public static Menu_principal Menu_Principal = new Menu_principal();
             public static Registrarse Registrarse = new Registrarse();
             public static Iniciar_sesion Iniciar_Sesion = new Iniciar_sesion();
             public static Transacciones Transacciones = new Transacciones();
+            public static Estadisticos Estadisticos = new Estadisticos();
+            public static Consignacion Consignar = new Consignacion();
+            public static Retiro Retiro = new Retiro();
+            public static Tranferencias Tranferencias = new Tranferencias();
 
-        }
-        public void actualizar_lista(Registrarse envio_datos )
-        {
-            //Cuentas += envio_datos.;
         }
 
         public void AñadirCuenta(CuentaAhorros cuenta)
@@ -35,13 +35,8 @@ namespace BancoABC
            Cuentas.Add(cuenta);
         }
 
-        public void actualizar (BancoCuentas Cuenta)
-        {
-            //Cuentas.Add(Cuenta);
-        }
-
         // referenciado en CuentaAhorros para implementar método consignar
-        public bool ExisteCuenta(int numero_de_cuenta)
+        public static bool ExisteCuenta(int numero_de_cuenta)
         {
             foreach(CuentaAhorros cuenta in Cuentas)
             {

@@ -62,6 +62,10 @@ namespace BancoABC
                     text_pin.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    label_anota.Text = "Su numero de cuenta es:";
+                    label_anota.ForeColor = System.Drawing.Color.Black;
+                    label_cuenta.Text = Numero_de_cuenta.ToString();
+                    label_cuenta.ForeColor = System.Drawing.Color.Black;
                     cont = 0;
                 }
                 else
@@ -83,10 +87,14 @@ namespace BancoABC
                     text_pin.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
+                    label_anota.Text = "Su numero de cuenta es:";
+                    label_anota.ForeColor = System.Drawing.Color.Black;
+                    label_cuenta.Text = Numero_de_cuenta.ToString();
+                    label_cuenta.ForeColor = System.Drawing.Color.Black;
                     cont = 0;
                 }
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 label_result_registrarse.Text = "Campos vacios, por favor llenar los datos";
                 label_result_registrarse.ForeColor = System.Drawing.Color.Red;
@@ -164,6 +172,11 @@ namespace BancoABC
         private void text_pin_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.OnlyNumbers(e);
+        }
+
+        private void text_pin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
