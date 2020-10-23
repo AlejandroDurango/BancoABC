@@ -14,7 +14,6 @@ namespace BancoABC
 {
     public partial class Iniciar_sesion : Form
     {
-        Registrarse envio_datos = new Registrarse();
         BancoCuentas banco = new BancoCuentas();
         ControlValidacion validar = new ControlValidacion();
 
@@ -38,11 +37,8 @@ namespace BancoABC
         {
             try
             {
-                int numero_cuenta = int.Parse(cuenta_text.Text);
-                double Identificacion = double.Parse(identificacion_text.Text);
-
-
-                if (banco.IniciarSesion(numero_cuenta, Identificacion) == true)
+                int contraseña = int.Parse(contraseña_text.Text);
+                if (banco.IniciarSesion(contraseña) == true)
                 {
                     Iniciar_sesion.ActiveForm.Hide();
                     Form Transacciones = new Transacciones();
@@ -53,12 +49,19 @@ namespace BancoABC
                     throw new AccountExistsException("Datos incorrectos,Por favor verificalos");
                 }
             }
-           
-        
             catch (AccountExistsException ex)
             {
                 label2.Text = ex.getMensaje();
                 label2.ForeColor = System.Drawing.Color.Red;
+            }
+            catch(FormatException ex)
+            {
+                label2.Text = "campos vacio, no se reconoce usuario";
+                label2.ForeColor = System.Drawing.Color.Red;
+            }
+            finally
+            {
+                contraseña_text.ResetText();
             }
         }
 
@@ -88,6 +91,11 @@ namespace BancoABC
             validar.OnlyNumbers(e);
         }
         private void cuenta_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

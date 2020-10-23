@@ -22,6 +22,7 @@ namespace BancoABC
             public static Menu_principal Menu_Principal = new Menu_principal() ;
             public static Registrarse Registrarse = new Registrarse();
             public static Iniciar_sesion Iniciar_Sesion = new Iniciar_sesion();
+            public static Transacciones Transacciones = new Transacciones();
 
         }
         public void actualizar_lista(Registrarse envio_datos )
@@ -59,16 +60,13 @@ namespace BancoABC
         }
 
         
-        public bool IniciarSesion(int numero_cuenta, double identificacion)
+        public bool IniciarSesion(int pin)
         {  ;
             foreach(CuentaAhorros cuenta in Cuentas)
             {
-              if(numero_cuenta == cuenta.Numero_de_cuenta1)
+              if(pin == cuenta.Pin1)
                 {
-                    if(identificacion == cuenta.Identificacion1)
-                    {
-                        return true ;
-                    }
+                    return true;
                 }
             }
 

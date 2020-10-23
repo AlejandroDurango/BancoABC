@@ -30,28 +30,27 @@ namespace BancoABC
 
         }
 
-        private void button_iniciar_sesion_Click(object sender, EventArgs e)
+        private void button_registrar_Click(object sender, EventArgs e)
         {
-            
+            Console.WriteLine(BancoCuentas.getBanco().Count);
             Random random = new Random();
             int Numero_de_cuenta = random.Next(100000001,int.MaxValue);
-            String Nombre = (Textbox_nombres.Text +  " " + TextBox_apellidos.Text);
-            double Identificacion = double.Parse(textBox_identificación.Text);
-            int Saldoinicial = int.Parse(textBox_saldo.Text);
-            double Saldo = 0;
-            if (Saldoinicial >= 2000000)
-            {
-                Saldo = Saldoinicial *0.05 + Saldoinicial;
-            } 
-            else
-            {
-                Saldo = Saldoinicial;
-            }
-
-            CuentaAhorros Nueva_cuenta = new CuentaAhorros(Numero_de_cuenta, Nombre, Identificacion, Saldo);
-
             try
             {
+                String Nombre = (Textbox_nombres.Text + " " + TextBox_apellidos.Text);
+                double Identificacion = double.Parse(textBox_identificación.Text);
+                int Saldoinicial = int.Parse(textBox_saldo.Text);
+                int Pin = int.Parse(text_pin.Text);
+                double Saldo = 0;
+                if (Saldoinicial >= 2000000)
+                {
+                    Saldo = Saldoinicial * 0.05 + Saldoinicial;
+                }
+                else
+                {
+                    Saldo = Saldoinicial;
+                }
+                CuentaAhorros Nueva_cuenta = new CuentaAhorros(Numero_de_cuenta, Nombre, Identificacion, Saldo, Pin);
                 int cont = 0;
                 if (BancoCuentas.getBanco().Count == 0)
                 {
@@ -60,24 +59,20 @@ namespace BancoABC
                     TextBox_apellidos.ResetText();
                     textBox_identificación.ResetText();
                     textBox_saldo.ResetText();
+                    text_pin.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
-                    label_anota.Text = "Tu numero de Cuenta es:";
-                    label_anota.ForeColor = System.Drawing.Color.Green;
-                    label_cuenta.Text = Numero_de_cuenta.ToString();
-                    label_cuenta.ForeColor = System.Drawing.Color.Green;
                     cont = 0;
                 }
                 else
                 {
-                    while (cont <= BancoCuentas.getBanco().Count)
+                    while (cont < BancoCuentas.getBanco().Count)
                     {
                         if (Nueva_cuenta.Identificacion1 == BancoCuentas.getBanco()[cont].Identificacion1)
                         {
                             throw new AccountExistsException("Error, Usuario ya registrado");
                         }
                         cont++;
-                        Console.WriteLine("hola2");
                     }
 
                     banco.AñadirCuenta(Nueva_cuenta);
@@ -85,27 +80,30 @@ namespace BancoABC
                     TextBox_apellidos.ResetText();
                     textBox_identificación.ResetText();
                     textBox_saldo.ResetText();
+                    text_pin.ResetText();
                     label_result_registrarse.Text = "Registro Exitoso";
                     label_result_registrarse.ForeColor = System.Drawing.Color.Green;
                     cont = 0;
                 }
-                
-
             }
-            catch(AccountExistsException ex)
+            catch (FormatException ex)
+            {
+                label_result_registrarse.Text = "Campos vacios, por favor llenar los datos";
+                label_result_registrarse.ForeColor = System.Drawing.Color.Red;
+            }
+            catch (AccountExistsException ex)
             {
                 label_result_registrarse.Text = ex.getMensaje();
                 label_result_registrarse.ForeColor = System.Drawing.Color.Red;
-            }
-            finally
-            {
                 Textbox_nombres.ResetText();
                 TextBox_apellidos.ResetText();
                 textBox_identificación.ResetText();
                 textBox_saldo.ResetText();
+                text_pin.ResetText();
             }
-            
-            
+
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -154,6 +152,16 @@ namespace BancoABC
         }
 
         private void textBox_saldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.OnlyNumbers(e);
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_pin_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.OnlyNumbers(e);
         }
