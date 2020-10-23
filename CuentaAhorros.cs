@@ -14,19 +14,22 @@ namespace BancoABC
         private String Nombre_titular;
         private double Identificacion;
         private double Saldo;
+        private int Pin;
 
-        public CuentaAhorros(int numero_de_cuenta, string nombre_titular, double identificacion, double saldo)
+        public CuentaAhorros(int numero_de_cuenta, string nombre_titular, double identificacion, double saldo, int pin)
         {
             Numero_de_cuenta = numero_de_cuenta;
             Nombre_titular = nombre_titular;
             Identificacion = identificacion;
             Saldo = saldo;
+            Pin = pin;
         }
         
         public int Numero_de_cuenta1 { get => Numero_de_cuenta; set => Numero_de_cuenta = value; }
         public string Nombre_titular1 { get => Nombre_titular; set => Nombre_titular = value; }
         public double Identificacion1 { get => Identificacion; set => Identificacion = value; }
         public double Saldo1 { get => Saldo; set => Saldo = value; }
+        public int Pin1 { get => Pin; set => Pin = value; }
 
         public bool Consignar(int numero_de_cuenta)
         {
@@ -58,8 +61,7 @@ namespace BancoABC
 
         public void Transferir(int numero_cuenta_destino, int monto)
         {
-            BancoCuentas banco = new BancoCuentas();
-            List<CuentaAhorros> lista_cuentas = banco.getBanco();
+            List<CuentaAhorros> lista_cuentas = BancoCuentas.getBanco();
             foreach(CuentaAhorros cuenta in lista_cuentas)
             {
                 if(numero_cuenta_destino == cuenta.Numero_de_cuenta1)

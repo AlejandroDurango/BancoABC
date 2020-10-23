@@ -31,9 +31,9 @@ namespace BancoABC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Transacciones.ActiveForm.Hide();
-            Form anterior = new Iniciar_sesion();
-            anterior.Show();
+
+            this.Hide();
+            BancoCuentas.Variables.Iniciar_Sesion.Visible = true;
 
         }
 
