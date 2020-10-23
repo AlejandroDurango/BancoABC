@@ -9,15 +9,9 @@ namespace BancoABC
 {
     class Principal
     {
-        static void Main(string[] args)
+        static void Main(string[]args)
         {   Form IniciarApp = BancoCuentas.Variables.Menu_Principal;
             Application.Run(IniciarApp);
-        }
-       
-        public void actualizar(CuentaAhorros cuenta)
-        {
-            
-       
         }
         
     }

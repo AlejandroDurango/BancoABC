@@ -17,23 +17,17 @@ namespace BancoABC
             InitializeComponent();
         }
 
-        private void title_consignacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_consignar_Click(object sender, EventArgs e)
         {
-            Transacciones.ActiveForm.Hide();
-            Form nueva_consignacion = new Consignacion();
-            nueva_consignacion.Show();
+            this.Visible = false;
+            BancoCuentas.Variables.Consignar.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             this.Hide();
-            BancoCuentas.Variables.Iniciar_Sesion.Visible = true;
+            BancoCuentas.Variables.Menu_Principal.Visible = true;
 
         }
 
@@ -44,16 +38,15 @@ namespace BancoABC
 
         private void Button_retirar_Click(object sender, EventArgs e)
         {
-            Transacciones.ActiveForm.Hide();
-            Form nuevoretiro = new Retiro();
-            nuevoretiro.Show();
+            this.Visible = false;
+            BancoCuentas.Variables.Retiro.Show();
         }
 
         private void Tranferencia_Click(object sender, EventArgs e)
         {
-            Transacciones.ActiveForm.Hide();
-            Form nuevatranferencia = new Tranferencias();
-            nuevatranferencia.Show();
+            this.Visible = false ;
+            BancoCuentas.Variables.Tranferencias.Show();
+
         }
     }
 }
