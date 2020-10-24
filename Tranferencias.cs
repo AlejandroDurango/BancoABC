@@ -44,6 +44,11 @@ namespace BancoABC
                 label_result_transferencia.ForeColor = System.Drawing.Color.Green;
                 label_transferido.Text = "su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
                 BancoCuentas.Total_operaciones += 1;
+                if(monto_tranferir > BancoCuentas.Monto_mayor)
+                {
+                    BancoCuentas.Monto_mayor = monto_tranferir;
+                    BancoCuentas.Cliente_mayor = Iniciar_sesion.Cuenta.Nombre_titular1;
+                }
             }
             catch (NegativeAmountException ex)
             {

@@ -45,7 +45,8 @@ namespace BancoABC
             result_totaloperaciones.Text = BancoCuentas.Total_operaciones.ToString();
             result_totaloperaciones.ForeColor = System.Drawing.Color.Green;
 
-
+            result_mayor_consignacion.Text = "El cliente " + BancoCuentas.Cliente_mayor + "es el top con: " + BancoCuentas.Monto_mayor.ToString();
+            result_mayor_consignacion.ForeColor = System.Drawing.Color.Green;
         }
     }
 }
