@@ -47,13 +47,8 @@ namespace BancoABC
                     label_result_consigna.Text = "La Cuenta Existe, Puedes Tranferir";
                     label_result_consigna.ForeColor = System.Drawing.Color.Green;
                 }
-                else
-                {
-                    throw new AccountExistsException("Datos incorrectos,Por favor verificalos");
-                }
-            
             }
-            catch (AccountExistsException ex)
+            catch (AccountNoExistException ex)
             {
                 label_result_consigna.Text = ex.getMensaje();
                 label_result_consigna.ForeColor = System.Drawing.Color.Red;
@@ -61,6 +56,11 @@ namespace BancoABC
             catch (FormatException )
             {
                 label_result_consigna.Text = "campos vacio, no se reconoce usuario";
+                label_result_consigna.ForeColor = System.Drawing.Color.Red;
+            }
+            catch(OverflowException)
+            {
+                label_result_consigna.Text = "Cuenta ingresada no válida";
                 label_result_consigna.ForeColor = System.Drawing.Color.Red;
             }
             finally

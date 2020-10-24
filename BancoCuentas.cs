@@ -49,20 +49,51 @@ namespace BancoABC
             return false;
         }
 
+        public static bool Retiro(int monto, int identificacion)
+        {
+            foreach (CuentaAhorros cuenta in Cuentas)
+            {
+                if (cuenta.Identificacion1 == identificacion)
+                {
+                    if(monto <= cuenta.Saldo1)
+                    {
+                        cuenta.Saldo1 -= monto;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    AccountNoExistException ex = new AccountNoExistException("La cuenta ingresada no existe");
+                }
+
+            }
+
+            return false;
+        }
+
+
         public static List<CuentaAhorros> getBanco()
         {
             return Cuentas;
         }
 
         
-        public bool IniciarSesion(int pin)
-        {  ;
+        public bool IniciarSesion(int identificacion,int pin)
+        {
             foreach(CuentaAhorros cuenta in Cuentas)
             {
-              if(pin == cuenta.Pin1)
-                {
-                    return true;
-                }
+              if(identificacion == cuenta.Identificacion1)
+              {
+                    if (pin == cuenta.Pin1)
+                    {
+                          return true;
+                    }
+              }
+              
             }
 
             return false;
