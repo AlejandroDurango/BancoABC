@@ -43,6 +43,7 @@ namespace BancoABC
                 label_result_transferencia.Text = "Transferencia exitosa";
                 label_result_transferencia.ForeColor = System.Drawing.Color.Green;
                 label_transferido.Text = "su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
+                BancoCuentas.Total_operaciones += 1;
             }
             catch (NegativeAmountException ex)
             {

@@ -11,10 +11,19 @@ namespace BancoABC
     {
        
         private static List<CuentaAhorros> Cuentas;
+        public static int Total_cosignaciones;
+        public static int Total_retiros;
+        public static int Total_operaciones;
+        public static String Cliente_mayor;
+        public static int Monto_mayor;
 
         public  BancoCuentas()
         {
-            Cuentas = new List<CuentaAhorros>();             
+            Cuentas = new List<CuentaAhorros>();
+            Total_cosignaciones = 0;
+            Total_retiros = 0;
+            Cliente_mayor = "";
+            Monto_mayor = 0;
         }
 
         public class Variables

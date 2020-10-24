@@ -33,5 +33,19 @@ namespace BancoABC
           
 
         }
+
+        private void button_generar_Click(object sender, EventArgs e)
+        {
+            result_totalconsignaciones.Text = BancoCuentas.Total_cosignaciones.ToString();
+            result_totalconsignaciones.ForeColor = System.Drawing.Color.Green;
+
+            result_totalretiros.Text = BancoCuentas.Total_retiros.ToString();
+            result_totalretiros.ForeColor = System.Drawing.Color.Green;
+
+            result_totaloperaciones.Text = BancoCuentas.Total_operaciones.ToString();
+            result_totaloperaciones.ForeColor = System.Drawing.Color.Green;
+
+
+        }
     }
 }
