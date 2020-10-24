@@ -46,18 +46,19 @@
             // 
             this.button_generar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_generar.Location = new System.Drawing.Point(77, 235);
-            this.button_generar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_generar.Margin = new System.Windows.Forms.Padding(2);
             this.button_generar.Name = "button_generar";
             this.button_generar.Size = new System.Drawing.Size(78, 32);
             this.button_generar.TabIndex = 25;
             this.button_generar.Text = "Generar";
             this.button_generar.UseVisualStyleBackColor = true;
+            this.button_generar.Click += new System.EventHandler(this.button_generar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BancoABC.Properties.Resources.Logo_Bank1;
             this.pictureBox1.Location = new System.Drawing.Point(77, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +70,7 @@
             this.buttonatras.AutoSize = true;
             this.buttonatras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonatras.Location = new System.Drawing.Point(8, 8);
-            this.buttonatras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonatras.Margin = new System.Windows.Forms.Padding(2);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(50, 23);
             this.buttonatras.TabIndex = 27;
@@ -202,7 +203,7 @@
             this.Controls.Add(this.buttonatras);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_generar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Estadisticos";
             this.Text = "Estadisticos";
             this.Load += new System.EventHandler(this.Estadisticos_Load);

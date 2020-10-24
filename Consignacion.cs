@@ -46,6 +46,8 @@ namespace BancoABC
                 {
                     label_result_consigna.Text = "La Cuenta Existe, Puedes Tranferir";
                     label_result_consigna.ForeColor = System.Drawing.Color.Green;
+                    BancoCuentas.Total_cosignaciones += 1;
+                    BancoCuentas.Total_operaciones += 1;
                 }
             }
             catch (AccountNoExistException ex)

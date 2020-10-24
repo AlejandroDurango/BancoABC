@@ -37,7 +37,9 @@ namespace BancoABC
                  {
                      label_result_retiro.Text = "Retiro realizado";
                      label_result_retiro.ForeColor = System.Drawing.Color.Green;
-                    label_monto_retiro.Text = "Su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
+                     label_monto_retiro.Text = "Su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
+                     BancoCuentas.Total_retiros += 1;
+                     BancoCuentas.Total_operaciones += 1;
                  }
              }
              catch (FormatException)
