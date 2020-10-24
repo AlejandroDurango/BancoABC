@@ -9,6 +9,7 @@ using System.Security;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BancoABC
 {
@@ -16,11 +17,11 @@ namespace BancoABC
     {
         BancoCuentas banco = new BancoCuentas();
         ControlValidacion validar = new ControlValidacion();
-
+        public static int id;
+        public static CuentaAhorros Cuenta;
         public Iniciar_sesion()
         {
-            InitializeComponent();
-           
+            InitializeComponent();    
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,7 +39,18 @@ namespace BancoABC
             try
             {
                 int contraseña = int.Parse(contraseña_text.Text);
-                if (banco.IniciarSesion(contraseña) == true)
+                int identificacion = int.Parse(text_identificacion.Text);
+                id = identificacion;
+                Cuenta = null;
+                foreach(CuentaAhorros cuenta in BancoCuentas.getBanco())
+                {
+                    if(identificacion == cuenta.Identificacion1)
+                    {
+                        Cuenta = cuenta;
+                        break;
+                    }
+                }
+                if (banco.IniciarSesion(identificacion, contraseña) == true)
                 {
                     this.Hide();
                     this.label2.Text = "Ingresa a Tus Sueños";
@@ -95,6 +107,11 @@ namespace BancoABC
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

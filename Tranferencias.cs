@@ -19,7 +19,7 @@ namespace BancoABC
 
         private void buttonatras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             BancoCuentas.Variables.Transacciones.Visible = true;
         }
 
@@ -39,11 +39,17 @@ namespace BancoABC
             {
                 int numero_cuenta = int.Parse(TextBox_numerocuenta_tranferir.Text);
                 int monto_tranferir = int.Parse(textBox_monto_tranferir.Text);
-                CuentaAhorros.Transferir(numero_cuenta, monto_tranferir);
-                
-                
+                Iniciar_sesion.Cuenta.Transferir(numero_cuenta, monto_tranferir);
+                label_result_transferencia.Text = "Transferencia exitosa";
+                label_result_transferencia.ForeColor = System.Drawing.Color.Green;
+                label_transferido.Text = "su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
             }
             catch (NegativeAmountException ex)
+            {
+                label_result_transferencia.Text = ex.getMensaje();
+                label_result_transferencia.ForeColor = System.Drawing.Color.Red;
+            }
+            catch(AccountNoExistException ex)
             {
                 label_result_transferencia.Text = ex.getMensaje();
                 label_result_transferencia.ForeColor = System.Drawing.Color.Red;
@@ -51,6 +57,11 @@ namespace BancoABC
             catch (FormatException)
             {
                 label_result_transferencia.Text = "campos vacio, no se reconoce usuario";
+                label_result_transferencia.ForeColor = System.Drawing.Color.Red;
+            }
+            catch (OverflowException)
+            {
+                label_result_transferencia.Text = "Datos inválidos, por favor intente de nuevo";
                 label_result_transferencia.ForeColor = System.Drawing.Color.Red;
             }
             finally

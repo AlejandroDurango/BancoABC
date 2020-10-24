@@ -41,9 +41,10 @@
             // 
             this.Iniciar_sesion.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Iniciar_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Iniciar_sesion.Location = new System.Drawing.Point(59, 247);
+            this.Iniciar_sesion.Location = new System.Drawing.Point(39, 161);
+            this.Iniciar_sesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Iniciar_sesion.Name = "Iniciar_sesion";
-            this.Iniciar_sesion.Size = new System.Drawing.Size(198, 47);
+            this.Iniciar_sesion.Size = new System.Drawing.Size(132, 31);
             this.Iniciar_sesion.TabIndex = 0;
             this.Iniciar_sesion.Text = "Iniciar Sesión";
             this.Iniciar_sesion.UseCompatibleTextRendering = true;
@@ -54,9 +55,10 @@
             // 
             this.Button_Registrarse.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Button_Registrarse.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.Button_Registrarse.Location = new System.Drawing.Point(59, 319);
+            this.Button_Registrarse.Location = new System.Drawing.Point(39, 207);
+            this.Button_Registrarse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Button_Registrarse.Name = "Button_Registrarse";
-            this.Button_Registrarse.Size = new System.Drawing.Size(198, 47);
+            this.Button_Registrarse.Size = new System.Drawing.Size(132, 31);
             this.Button_Registrarse.TabIndex = 1;
             this.Button_Registrarse.Text = "Registrarse";
             this.Button_Registrarse.UseCompatibleTextRendering = true;
@@ -68,9 +70,10 @@
             // 
             this.Estadisticos.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Estadisticos.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.Estadisticos.Location = new System.Drawing.Point(179, 403);
+            this.Estadisticos.Location = new System.Drawing.Point(119, 262);
+            this.Estadisticos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Estadisticos.Name = "Estadisticos";
-            this.Estadisticos.Size = new System.Drawing.Size(132, 35);
+            this.Estadisticos.Size = new System.Drawing.Size(88, 23);
             this.Estadisticos.TabIndex = 2;
             this.Estadisticos.Text = "Estadisticas";
             this.Estadisticos.UseCompatibleTextRendering = true;
@@ -81,9 +84,10 @@
             // Exit
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Exit.Location = new System.Drawing.Point(12, 408);
+            this.Exit.Location = new System.Drawing.Point(8, 265);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(75, 30);
+            this.Exit.Size = new System.Drawing.Size(50, 19);
             this.Exit.TabIndex = 4;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
@@ -94,10 +98,10 @@
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
             this.Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Logo.InitialImage")));
-            this.Logo.Location = new System.Drawing.Point(59, 34);
+            this.Logo.Location = new System.Drawing.Point(39, 22);
             this.Logo.Margin = new System.Windows.Forms.Padding(0);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(200, 200);
+            this.Logo.Size = new System.Drawing.Size(133, 130);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 3;
             this.Logo.TabStop = false;
@@ -105,14 +109,15 @@
             // 
             // Menu_principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 450);
+            this.ClientSize = new System.Drawing.Size(225, 292);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.Estadisticos);
             this.Controls.Add(this.Button_Registrarse);
             this.Controls.Add(this.Iniciar_sesion);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_principal";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Menú_principal_Load);
