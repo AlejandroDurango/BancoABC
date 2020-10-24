@@ -25,22 +25,40 @@ namespace BancoABC
 
         private void Retiro_Load(object sender, EventArgs e)
         {
-
+ 
         }
 
         private void button_verifica_retiro_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                int monto = int.Parse(TextBox_monto_retirar.Text);
-                
-
-            }
-            catch 
-            {
-            }
-            
+        {    
+             try
+             {
+                 int monto = int.Parse(TextBox_monto_retirar.Text);
+                 if (CuentaAhorros.Retirar(monto, Iniciar_sesion.id) == true)
+                 {
+                     label_result_retiro.Text = "Retiro realizado";
+                     label_result_retiro.ForeColor = System.Drawing.Color.Green;
+                    label_monto_retiro.Text = "Su saldo actual es: " + Iniciar_sesion.Cuenta.Saldo1;
+                 }
+             }
+             catch (FormatException)
+             {
+                 label_result_retiro.Text = "campo vacio, no se reconoce usuario";
+                 label_result_retiro.ForeColor = System.Drawing.Color.Red;
+             }
+             catch (OverflowException)
+             {
+                 label_result_retiro.Text = "Cuenta ingresada no válida";
+                 label_result_retiro.ForeColor = System.Drawing.Color.Red;
+             }
+             catch(AmountInsufficientException ex)
+             {
+                 label_result_retiro.Text = ex.getMensaje();
+                 label_result_retiro.ForeColor = System.Drawing.Color.Red;
+             }
+             finally
+             {
+                 TextBox_monto_retirar.ResetText();
+             }
         }
     }
 }
